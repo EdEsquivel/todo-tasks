@@ -4,7 +4,7 @@ var TaskModel = require('./task_schema');
 var router = express.Router();
 let environment = null;
 
-if (!process.env.ON_HEROKU) {
+if (!process.env.ON_RENDER) {
     console.log("Cargando variables de entorno desde archivo");
     const env = require('node-env-file');
     env(__dirname + '/.env');
